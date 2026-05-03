@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tasks-config
+data:
+  TASKS_PORT: "8082"
+  AUTH_GRPC_ADDR: "auth:50051"
+  REDIS_ADDRS: ""
+  REDIS_PASSWORD: ""
+  REDIS_DB: "0"
+  CACHE_TTL_SECONDS: "120"
+  CACHE_TTL_JITTER_SECONDS: "30"
+  REDIS_OP_TIMEOUT_MS: "300"
+  REDIS_INIT_TIMEOUT_MS: "1500"
+  RABBIT_URL: ""
+  QUEUE_NAME: "task_events"
+  DLX_NAME: "task_jobs_dlx"
+  DLQ_NAME: "task_jobs_dlq"
+  INSTANCE_ID: "tasks-k8s"
